@@ -7,7 +7,10 @@
 	Terminar com a mensagem “Fim de processamento”, exibida no monitor.
 */
 
-numero :- write('digite numero: '),nl,read(X), processa(X).
+numero :-
+	write('digite numero: '),
+	nl,read(X),processa(X).
 processa(fim) :- !.
-processa(N) :- C is N*N*N, write(C),nl,numero.
-X = 'fim', write('Fim de processamento').
+processa(N) :- C is N*N*N,
+	write(C),nl,numero.
+F = 'fim', write('Fim de processamento').

@@ -6,5 +6,6 @@
 */
 
 soma([],0).
-soma(Cabeca, Cauda, N):- soma(Cauda, N1),
-						N is N1 + Cabeca.
+soma([Cabeca|Cauda], N):-
+				soma(Cauda, N1),
+				N is N1 + Cabeca.

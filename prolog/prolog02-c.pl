@@ -13,4 +13,4 @@ numero :-
 processa(fim) :- !.
 processa(N) :- C is N*N*N,
 	write(C),nl,numero.
-F = 'fim', write('Fim de processamento').
+X = 'fim', write('Fim de processamento').

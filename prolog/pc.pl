@@ -5,12 +5,19 @@
 	numérico do usuário, calcula e exibe o resultado e volta a solicitar outro valor. A
 	digitação será encerrada quando o usuário digitar “fim”.
 	Terminar com a mensagem “Fim de processamento”, exibida no monitor.
+
 */
 
-numero :-
-	write('digite numero: '),
-	nl,read(X),processa(X).
-processa(fim) :- !.
-processa(N) :- C is N*N*N,
-	write(C),nl,numero.
-X = 'fim', write('Fim de processamento').
+cubo:-
+	write('Informe um número: '),
+	read(X),
+	calculaCubo(X).
+
+calculaCubo(fim) :- !,
+				write('Fim de processamento').				
+
+calculaCubo(N) :-
+		R1 is N*N*N,
+		write(R1),
+		nl,
+		cubo.

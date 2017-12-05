@@ -7,3 +7,4 @@
 	S = [a, p, q, r].
 */
 
+inserir(X,Y,[X|Y]).
